@@ -9,7 +9,7 @@ banner = ("#################################\n"
 print(banner)
 print('')
 
-process = raw_input("Process Name to Fuzz (Without .exe): ")
+process = raw_input("Process Name to Fuzz (Excl. Extension): ")
 
 def check_process():
     if str(process + ".exe") in (p.name() for p in psutil.process_iter()):
